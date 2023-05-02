@@ -1,38 +1,435 @@
 .App {
   text-align: center;
+  font-family: 'Gruppo', cursive;
+  font-family: 'Playfair Display', serif;
+  height: 93vh
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/*----------NAVIGATION----------*/
+#nav{
+  font-family: 'Playfair Display', serif;
+  min-height: 7vh;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-stretch: expanded;
+  display: flex;
+  justify-content: center;
+  position: sticky;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav-link{
+  margin: 15px 30px;
+}
+
+#home-link:hover{
+  color: rgb(254,100,250);
+  animation: home-link 5s infinite;
+}
+
+@keyframes home-link{
+  14%{
+    color:rgb(254,100,250);
+  }
+  27%{
+    color:rgba(254,133,219);
+  }
+  42%{
+    color: rgba(252,190,161);
+  }
+  56%{
+    color:rgba(243,219,176);
+  }
+  70%{
+    color: rgba(234,209,230);
+  }
+  84%{
+    color:rgba(232,207,234);
+  }
+  100%{
+    color:rgb(254,100,250);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+#carousel-link:hover{
+  color:rgba(158,196,152);
+  animation: carousel-link 5s infinite;
+}
+
+@keyframes carousel-link{
+  14%{
+    color:rgba(158,196,152);
+  }
+  27%{
+    color: rgba(109,189,151);
+  }
+  42%{
+    color:rgba(170,196,135);
+  }
+  56%{
+    color:rgba(239,201,125);
+  }
+  70%{
+    color:rgba(242,148,137);
+  }
+  84%{
+    color:rgb(239,68,154);
+  }
+  100%{
+    color:rgba(158,196,152);
+  }
+}
+
+
+#login-link:hover{
+  color:rgba(194,215,215);
+  animation: login-link 5s infinite;
+}
+
+@keyframes login-link{
+  16%{
+    color:rgba(194,215,215);
+  }
+  32%{
+    color:rgba(146,205,188);
+  }
+  48%{
+    color: rgba(144,199,211);
+  }
+  64%{
+    color:rgba(189,209,218);
+  }
+  80%{
+    color:rgba(174,162,247,1);
+  }
+  100%{
+    color:rgba(194,215,215);
+  }
+}
+
+/*----------NAVIGATION----------*/
+#home{
+  height: 100%;
+  background: rgb(254,100,250);
+  background: radial-gradient(circle, rgba(254,100,250,1) 0%, rgba(254,133,219,1) 13%, rgba(252,190,161,1) 25%, rgba(248,211,153,1) 32%, rgba(243,219,176,1) 35%, rgba(234,209,230,1) 52%, rgba(232,207,234,1) 100%);
+  display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  overflow-y: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+#home-title{
+  font-size: 4em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#home-descript{
+  font-size: 1.2em;
+  width: 35%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+#stars{
+  position: absolute;
+  width: 1000px;
+  opacity: 0%;
+  transform: rotate(30deg);
+  animation: stars 15s infinite;
+}
+
+
+
+@keyframes stars{
+  0%{
+    opacity: 0%;
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    opacity: 25%
   }
+  100%{
+    opacity: 0%;
+  }
+}
+
+
+#canvas{
+  font-family: 'Work Sans', sans-serif;
+  background-color:white;
+  border: none;
+}
+
+#canvas-title{
+  font-family: 'Libre Franklin', sans-serif;
+  opacity: 20%;
+  font-size: 2.7em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 0 #F0F0F0,
+    -1px 1px 0 #F0F0F0,
+    1px -1px 0 #F0F0F0,
+    -1px -1px 0 #F0F0F0,
+    0px 1px 0 #F0F0F0,
+    0px -1px 0 #F0F0F0,
+    -1px 0px 0 #F0F0F0,
+    1px 0px 0 #F0F0F0,
+    2px 2px 0 #B2B2B2,
+    -2px 2px 0 #B2B2B2,
+    2px -2px 0 #B2B2B2,
+    -2px -2px 0 #B2B2B2,
+    0px 2px 0 #B2B2B2,
+    0px -2px 0 #B2B2B2,
+    -2px 0px 0 #B2B2B2,
+    2px 0px 0 #B2B2B2,
+    1px 2px 0 #B2B2B2,
+    -1px 2px 0 #B2B2B2,
+    1px -2px 0 #B2B2B2,
+    -1px -2px 0 #B2B2B2,
+    2px 1px 0 #B2B2B2,
+    -2px 1px 0 #B2B2B2,
+    2px -1px 0 #B2B2B2,
+    -2px -1px 0 #B2B2B2;
+}
+
+.float-right{
+  float: right;
+  margin: -70px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+#canvas-button{
+  border: solid 1px white;
+  font-family: 'Work Sans', sans-serif;
+  background-color: transparent;
+  z-index: 1;
+}
+
+#canvas-button:hover{
+  color:rgb(254,100,250);
+  background-color: white;
+  opacity: 60%;
+}
+
+/*----------CAROUSEL----------*/
+#carousel{
+  height: 100%;
+  background: rgb(239,68,154);
+  background: radial-gradient(circle, rgba(239,68,154,1) 0%, rgba(242,148,137,1) 16%, rgba(239,201,125,1) 28%, rgba(170,196,135,1) 46%, rgba(109,189,151,1) 58%, rgba(158,196,152,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carousel-wrap{
+  width: 45%;
+}
+
+.item-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#bio{
+  margin-bottom: 50px;
+  background-color: rgb(255,255,255, 0.6);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+
+#star-overlay{
+  position: absolute;
+  z-index: 1;
+}
+
+#star1{
+  position: absolute;
+  right: 800px;
+  top: 300px;
+  opacity: 25%;
+  animation: stars 10s infinite 3s;
+  width: 60px;
+}
+
+#star2{
+  position: absolute;
+  right: -700px;
+  top: 150px;
+  opacity: 25%;
+  animation: stars 15s infinite;
+  width: 75px;
+}
+
+#star3{
+  position: absolute;
+  right: 500px;
+  top: -350px;
+  opacity: 25%;
+  animation: stars 8s infinite 5s;
+  width: 50px;
+}
+
+
+
+/*----------LOGIN----------*/
+#login{
+  height: 100%;
+  background: rgb(194,215,215);
+  background: radial-gradient(circle, rgba(194,215,215,1) 0%, rgba(118,210,184,1) 20%, rgba(144,199,211,1) 32%, rgba(138,198,208,1) 39%, rgba(202,216,218,1) 62%, rgba(174,162,247,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#form{
+  color:white;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#form-wrapper{
+  background-color: rgb(255,255,255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+.mb-3{
+  font-size: 1.5em;
+  font-family: 'Work Sans', sans-serif;
+  color: white;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 10px
+}
+
+#login-btn{
+  background-color:rgb(255,255,255, 0.001);
+  border-color: white;
+  margin-bottom: 1rem;
+}
+
+#login-btn:hover{
+  color:rgba(174,162,247,1);
+  border-color:rgba(174,162,247,1);
+}
+
+#formBasicEmail::placeholder{
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+}
+#formBasicPassword::placeholder{
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#formBasicEmail{
+  background-color:rgb(255,255,255, 0.001);
+  border-color: white;
+}
+
+#formBasicPassword{
+  background-color:rgb(255,255,255, 0.001);
+  border-color: white;
+}
+
+.login-titles{
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  letter-spacing: 10px;
+  font-size: 4em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1);
+  margin: 0px;
+}
+
+input[type=email], input[type=password]{
+  color: rgba(174,162,247,1);
+}
+
+
+#title-login{
+  top:6vh;
+  left:10px;
+}
+
+#title-join{
+  transform: rotate(90deg);
+  bottom: 190px;
+  right: -180px;
+
+}
+
+
+
+
+
+#pageupload{
+  height: 100%;
+  background: rgb(255,173,70);
+  background: radial-gradient(circle, rgba(255,173,70,1) 0%, rgba(250,149,112,1) 15%, rgba(245,131,141,1) 30%, rgba(238,113,167,1) 40%, rgba(237,112,169,1) 47%, rgba(227,97,199,1) 70%, rgba(198,102,253,1) 89%, rgba(204,146,254,1) 100%);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+#uploadhere{
+  font-size: 12em;
+  opacity: 0.7;
+}
+
+#uploadform{
+  z-index: 1;
+}
+
+#choose-btn{
+  background-color: transparent;
+  border-color: white;
+  margin: 15px;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+}
+
+#upload-btn{
+  background-color: transparent;
+  border-color: white;
+  margin: 15px;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+}
+
+#choose-btn:hover{
+  background-color: rgb(255,255,255, 0.7);
+  border-color: rgb(255,255,255, 0.7);
+  color: rgba(250,149,112,1);
+}
+
+#upload-btn:hover{
+  background-color: rgb(255,255,255, 0.7);
+  border-color: rgb(255,255,255, 0.7);
+  color: rgba(250,149,112,1);
 }
