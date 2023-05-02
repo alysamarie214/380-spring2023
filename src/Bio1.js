@@ -1,19 +1,9 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import profpic from './profpic.jpg';
 
 const Bio1 = () => {
-  return (        
-    <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={profpic} />
-    <Card.Body>
-        <Card.Title>Alysa Doherty</Card.Title>
-        <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
+  return (
+    <Card id = "bio" style={{ width: '18rem' }}>
+    <Card.Img variant="top" src="https://i.pinimg.com/564x/d9/21/aa/d921aa3412aacb6c05ecf016c94ac0c4.jpg" />
     </Card>
   );
 }
